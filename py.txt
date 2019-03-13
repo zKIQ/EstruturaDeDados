@@ -490,4 +490,30 @@ Seleção
 0 1 2 3 4 5 7 6
 0 1 2 3 4 5 6 7
 
+Analise corporativa inserção e seleção
+os dois, no pior casos, gastam n**2 passos
+porem, como inserção usa a informação do lado
+esquerdo ja ordenado, possui alguns casos bons
+entao, na media, inserção é melhor que seleção
+seleção sempre gasta n**2, pois procura o minimo
+no lado direito, do qual não se sane nada
+Inserção e seleção mostram como é a diferença
+entre o caso medio e o pior caso
+
+Mergesort introduz dois conceitos novos:
+1) eficiencia nao depende apenas do numero de
+passos, mas tambem do espaço que o algoritimo usa
+
+2) quando os dados são idependentes, posso executar
+cada chamada da recursão em paralelo
+
+Sera que existe algoritimo tao rapido como
+mergesort e que nao gaste tanto espaço
+
+Heapsort e Quicksort
+
+Heapsort nao veremos, porem a ideia é andar no
+vetor pelo indice, dobrando o valor dele
+como heapsort é meio complexo, vamos ver um
+algoritimo elegante, rapido que é o quicksort
 
