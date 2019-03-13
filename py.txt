@@ -1,0 +1,442 @@
+RECURSIVIDADE
+
+def fat(n):
+    if n <=1:
+        return 1
+    else:
+        return n* fat(n-1)
+print(fat(4))
+print(4*fat(3))
+
+#não possui for, nao posui while, e como faço a repetição?
+	No retorno da recursão, quando a instancia menor for resolvida
+
+
+Explicação:
+
+fat(4)
+
+n = 4
+
+if 4 <= 1:
+else:
+	return 4 * fat(3)             #fica parado ate resolver, então ele desenvolve em números menores até encontrar uma solução
+
+n = 3
+
+if 3 <= 1:
+else:
+	return 3 * fat(2)
+
+n = 2
+
+if 2 <= 1:
+else:
+	return 2 * fat(1)            # fat(1) = 1 então: 2 * 1 = 2 e assim por diante
+
+n = 1
+
+if 1 <= 1:
+	return 1                       #ponto em que se resolveu o problema. a partir dai ele retorna o numero 1 para o ultimo problema resolvido.
+
+
+
+
+======================================================================================================================================================
+
+
+
+
+def pot(x, n):
+    if n == 0:
+        return 1
+    else: 
+        return x * pot(x, n-1) 
+print(pot(2, 3))
+ 
+
+x = 2
+n = 3
+
+if 3 == 0
+else:
+	2 * pot(2)
+
+x = 2
+n = 2
+
+if 2 == 0
+else:
+	2 * pot(1)
+
+x = 2
+n = 1
+
+if 1 == 0
+else:
+	2 * pot(0)
+
+x=2
+n=0
+
+if 0 == 0:
+return 1 
+
+
+======================================================================================================================================================
+FUNÇÃO QUE UTILIZA RECURSIVIDADE É BOM?
+NAO
+#calcular fibonacci com recursividade é ruim pois
+#ele calcula varias vezes a mesma coisa como um idiota
+#como resolver isso?
+#usando um dicionario para guardar os valores ja calculados
+#só vou chamar a dupla recursão para quem ainda nao estiver
+#no dicionario
+
+
+#1 CODIGO MUITO ERRADO
+
+def fib(a):
+    if a <= 1:
+        return a
+    else:
+        return fib(a-1) + fib(a-2)
+print(fib(9))
+
+#1 UMA DAS MANEIRAS 
+
+from functools import lru_cache
+@lru_cache(maxsize=None)
+def fib(a):
+    print(a)
+    if a <= 1:
+        return a
+    else:
+        return fib(a-1) + fib(a-2)
+
+print(fib(50))
+
+F{}
+def fib(a):
+    print(a)
+    if a <= 1:
+        return a
+    else:
+	if a not in f: fib(a-1) + fib(a-2)
+        return f[a]
+
+print(fib(50))
+
+
+#2 
+def pot(x, n):
+	if n == 0: return 1
+	return x * pot(x, n-1)
+#3
+def mdc(a, b):
+	if a % b == 0: return b
+	return mdc(b, a%b)           # ao pé da letra o b substitui o "a" e o resto da divisão de a por b substitui o "b"
+#4
+def inv(s):
+	if len(s) == 0: return s
+	return inv(s[1:0])+s[0]
+#5
+def sd(n):
+	if n <= 9: return n
+	return n % 10 + sd(n // 10)
+
+
+
+===============================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
+
+PONTEIROS EM C UHUUU
+
+POR QUE APRENDEMOS PONTEIROS?
+PRINCIPALMENTE PARA A LIMITAÇÃO DOS VETORES
+#1 O TAMANHO DO VETOR É ESTÁTICO
+#2 INSERIR E REMOVER NO INICIO DE UM VETOR É MUITO LENTO
+
+QUAL A ESTRUTURA DE DADOS QUE RESOLVER ESSE PROBLEMA DE INSERIR E REMOVER ALEM DO FATO DO VETOR SER ESTÁTICO?
+
+A RESPOSTA É LISTA ENCADEADA: RESOLVE ESSES DOIS PROBLEMAS MAS, PARA IMPLEMENTAR ESTA NOVA ESTRUTURA DE DADOS, PRECISO USAR PONTEIROS!!!!!!
+COM PONTEIROS FAÇO ALOCAÇÃO DINÂMICA, PARA TER VETORES DE TAMANHO DINÂMICO, E TAMBÉM CONSIGO IMPLEMENTAR LISTAS ENCADEADAS("CAÇA AO TESOURO")
+
+
+===============================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
+
+
+Vetor são uma estrutura de dados que tem alguns pontos falhos: não são alocados 
+dinamicamente e a inserção ou remoção de elementos, no inicio é muito ruim
+como resolvo a inserção e remoção de elementos? Usando listas encadeadas ("caça ao tesouro")
+
+Vantagens da Lista encadeada: posso alocar dinamicamente elementos e inserir ou remover elementos é rápido.
+Desvantagens: Ocupam um pouco mais espaço
+
+1) Notem que estou inserindo ao contrario para ter uma lista 3 -> 5 -> 10 eu inseri 10, 5, 3
+por que?
+
+Porque inserir no começo da lista?
+Eu sei o inicio, se fosse inserir no final seria demorado pois teria que andar de um em um até o final
+
+
+===============================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
+
+ponteiros são fundamentais em C (e também muito difíceis)
+
+1)
+Eu faço passagem de parâmetros por referencia por ponteiro void troca(int *p; int*q)
+eu só consigo trocar variáveis locais, se eu passar o endereço delas nos argumentos da função troca, isso é, uso
+ponteiros para acessar as variáveis na origem
+
+2)
+Faço alocação dinâmica de um vetor como int *v e uso a função
+malloc para alocar a memoria do vetor no tamanho obtido em tempo de execução, isto é melhor do alocação estática
+lembra
+
+
+1. ponteiro e a coisa apontada sao realidades diferentes
+2. ponteiro só tem sentido se aponta para algo, se o seu 
+programa tiver um ponteiro que nao aponta pra nada, nem
+precisa entender o que ele faz, esta errado
+3. posso ter mais de um ponteiro apontando para a mesma 
+região da memória
+
+===============================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
+
+Fila - estrutura de dados onde onde o primeiro que entra é o primeiro que sai
+em ingles: FIFO (first in first out)
+
+o jeito mais facil de implementar uma fila é com um vetor, se
+voce sabe que a fila vai ter um tamanho limitado
+terei duas variaveis, s de inicio e t de posição livre,
+depois do ultimo da fila 
+Inserir elemnetos:
+f[t++] = x
+f[t]
+
+
+
+Busca vetor ordenado
+dois algoritimos possiveis
+
+busca sequencial
+busca binaria
+o primeiro nao *usa* a informação
+
+se voce tem uma lista telefonica, nao procura de folha em folha,
+do inicio ate o fim, mas abre a lista no meio.
+
+o problema ontem é que a maior parte de nossos dados **nao** esta e ordem
+
+entao eu quero saber se vale a pena colocar em ordem 
+vamos aprender cinco algoritimos de  ordenação
+
+
+ruins: inserção e seleção
+bons: mergesort, heapsort e quicksort
+
+eu estudando esses algorítimos aprendo como ver se um algorítimo é bom
+
+a calcular o numero de passos pelo pior caso, e pelo caso médio também vão aprender
+que um algorítimo pode ser paralelizado, se os dados de cada parte são independentes
+também irão aprender que não basta o algorítimo ter um numero de passos pequenos,
+ele tambem deve ocupar pouca memoria
+mergesort é rapido no numero de passos, mas ocupa o dobro da memoria
+
+os primeiros ruins sao inserção e seleção
+ate os ruins sao comparáveis entre si
+existem ruins e péssimos
+seleção é muito pior que inserção, é ruim!
+
+inserção tambem conhecido como algoritio do baralho cada carta voce ira comparar 
+com as ja em ordem do lado esquerdo e enfiar a carta na posição dela
+
+cartas com valores baixos são ruins, porque para inserir ela preciso mover todo mundo
+para a direita
+cartas com o valor alto são boas, nao precisam mover muita gente.
+
+3, 1, 4, 2, 6, 5, 7, 0
+    3 (preciso mover para direita)
+1, 3 (enfio o 1 na primeira pos)
+1, 3, 4 (não movo ninguém)
+1, 2, 3, 4
+1, 2, 3, 4, 6 (6 é grande)
+1, 2, 3, 4,  ,  6(movo o 6)
+1, 2, 3, 4, 5, 6, 7 (7 é um bom numero)
+    1, 2, 3, 4, 5, 6, 7
+    (0 é o pior numero, movo todos)
+0, 1, 2, 3, 4, 5, 6, 7 
+
+
+n * n = n² (pior caso)
+no entanto, aproveito uma informação, lado esquerdo ja esta
+em ordem, então na média gasto menos que n²
+
+
+2 6 1 3 5 0 4 7
+2
+2 6
+   2 6
+1 2 6
+1 2   6
+1 2 3 6 
+1 2 3   6
+1 2 3 5 6
+   1 2 3 5 6
+0 1 2 3 5 6
+0 1 2 3    5 6
+0 1 2 3 4 5 6
+0 1 2 3 4 5 6 7
+
+#seleção escolhe o menor para a direita e troca a posição atual com o menor selecionado
+ele também é ruim mas é péssimo, pois não uso  nenhuma informação, pois o lado direito
+é desconhecido  lado direito sendo desconhecido vai fazer com que meu algorítimo não tenha
+caso bom, apenas caso ruim
+
+inserção e seleção são ruim no pior caso, porem na média, inserção é melhor, inserção usa a 
+informação do lado esquerdo ordenado como uso o lado direito, que nao me da nenhuma 
+informação, na média ele é tão ruim como no pior caso
+
+2 6 1 3 5 0 4 7 (anda até o final do vetor e troca a posição atual com o minimo)
+0 6 1 3 5 2 4 7 (posição atual: 6, 1 é o minimo)
+0 1 6 3 5 2 4 7 (posição atual: 6, 2 é o minimo)
+0 1 2 3 5 6 4 7 (posição atual: 3, permanece)
+0 1 2 3 5 6 4 7 (posição atual: 5, 4 é o minimo)
+0 1 2 3 4 6 5 7 (posição atual: 6, 5 é o minimo)
+0 1 2 3 4 5 6 7 (termino)
+(sempre que ele olhar para a direita e não tiver um menor que ele, ele se auto-substitui)
+
+seleção tem o pior caso igual ao caso medio, pois nao consigo aproveitar nenhuma informação
+inserção aproveita o lado esquerdo que está sendo formado, ja ordenado, por isso na media ele é 
+melhor que o pior caso
+
+3 1 4 2 6 5 7 0
+0 1 4 2 6 5 7 3 (copia ele mesmo)
+0 1 2 4 6 5 7 3
+0 1 2 3 6 5 7 4
+0 1 2 3 4 5 7 6 (copia ele mesmo)
+0 1 2 3 4 5 6 7
+
+
+
+5 3 7 4 1 6 0 2
+3 5 7 4 1 6 0 2
+3 5 4 7 1 6 0 2
+3 4 5 7 1 6 0 2
+            1 é menor que todos da esquerda, entao anda todos para a direita
+1 3 4 5 7 6 0 2
+1 3 4 5 6 7 0 2
+		  0 é menor que todos, todos andam pra direita
+0 1 3 4 5 6 7 2
+0 1    3 4 5 6 7
+0 1 2 3 4 5 6 7
+
+5 3 7 4 1 6 0 2
+0 3 7 4 1 6 5 2
+0 1 7 4 3 6 5 2
+0 1 2 4 3 6 5 7
+0 1 2 3 4 6 5 7
+0 1 2 3 4 6 5 7 (compara ele com ele mesmo)
+0 1 2 3 4 5 6 7 
+
+====================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
+
+
+Comparando a inserção e seleção
+os dois tem n² operações no pior caso
+porem, na média inserção é melhor,
+pois usa a informação do lado esquerdo
+já ordenado, assim números grandes
+geram menos operações. No algoritmo
+de seleção uso o lado direito, que
+não fornece nenhuma informação adicional,
+isto é, sempre sera ruim
+
+
+como melhorar? vamos ver 3 algorítimos
+que usam a ideia de dividir em 2 da busca binaria
+
+Mergesort - dividir vetor em 2
+heasort - dividir índice do vetor em 2
+quicksort - escolher um pivô  e dividir
+		  o vetor em menores ou maiores
+		  que o pivô escolhido
+
+
+6 4 3 1 0 2 7 5     		- dividir em 2
+6 4 3 1     0 2 7 5  		- cada metade dividir em 2
+6 4   3 1   0 2    7 5 		- cada dupla dividir em 2 (terei vetores de tamanho 1)
+6,4   3,1   0,2    7,5 		- quando tiver vetores de tamanho 1 vou "voltar" juntando os pedaços ja ordenado
+					- ex juntar duas filas de crianças em ordem de altura numa unica fileira, comparando
+					- as duas crianças da frente e escolhendo a menor
+
+4 6   1 3   0 2    5 7 		- compara dois vetores com dois vetores sempre o primeiro do primeiro vetor com os outros do segundo vetor
+1 3 4 6    0 2 5 7		- 4 <1? - 4<3?
+0 1 2 3 4 5 6 7  		- 1<0? - 1<2? - 1<5? - 1<7?
+
+vamos analisar o numero de operações
+dividir em 2 o vetor é muito rapido
+
+vou gastar log2 n passo p/ isso
+cada vez que junto dois vetores
+ordenados gasto n passos
+
+logo, no total 1 * 2 = log n * n (base 2)
+
+o que é muito menor que n * n = n²
+
+4 2 3 1 5 0 6 7
+4 2 3 1   5 0 6 7
+4 2  3 1   5 0   6 7
+4,2  3,1   5,0   6,7
+
+2 4  1 3   0 5   6 7
+1 2 3 4    0 5 6 7
+0 1 2 3 4 5 6 7
+
+
+
+def merge(e, d):
+    r = []
+    i, j = 0, 0
+    while i < len(e) and j < len(d):
+        if e[i] <= d[j]:
+            r.append(e[i])
+            i += 1
+        else:
+            r.append(d[j])
+            j += 1
+    r += e[i:]
+    r += d[j:]
+    return r
+
+def mergesort(v):
+    if len(v) <= 1:
+        return v
+    else:
+        m = len(v) // 2
+        e = mergesort(v[:m])
+        d = mergesort(v[m:])
+        return merge(e, d)
+
+print (mergesort([3, 4, 8, 0, 6, 7, 4, 2, 1, 9, 4, 5]))
+
+
+
+Analise de mergesort:
+1 -   na media  log n * n (base 2) operações
+	é mais rápido que inserção e seleção.
+2 -    porém no mergesort é preciso um vetor auxiliar,
+	então no ultimo passo eu gasto o dobro de espaço
+3 - 	as duas metades de meresort são independentes
+	posso fazer em paralelo.
+	
+
+
+Mais uma analise de mergesort
+
+1. Para juntar duas fileiras gasto n passos no final.
+2. Para dividir em dois até que os vetores finais
+tenham tamanho 1, gasto log(n, 2)
+3. No total vou gastar n*llog(n, 2) passos, muito
+mais rapido que inserção e seleção
