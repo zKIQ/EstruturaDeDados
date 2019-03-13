@@ -248,7 +248,7 @@ ate os ruins sao comparáveis entre si
 existem ruins e péssimos
 seleção é muito pior que inserção, é ruim!
 
-inserção tambem conhecido como algoritio do baralho cada carta voce ira comparar 
+inserção tambem conhecido como algoritimo do baralho cada carta voce ira comparar 
 com as ja em ordem do lado esquerdo e enfiar a carta na posição dela
 
 cartas com valores baixos são ruins, porque para inserir ela preciso mover todo mundo
@@ -444,3 +444,50 @@ mais rapido que inserção e seleção
 preciso de um vetor auxiliar para o resultado da junção
 5. As duas metades do Mergesort são independentes
 logo posso executa-los em paralelo
+
+
+(7, 0, 3, 2, 6, 4, 1, 5)
+
+Mergesort
+
+7 0 3 2   6 4 1 5
+
+7 0   3 2   6 4   1 5
+7.0   3.2   6.4   1.5
+
+0 7   2 3   4 6   1 5
+
+0 2 3 7     1 4 5 6
+
+0 1 2 3 4 5 6 7
+
+Inserção 
+(7, 0, 3, 2, 6, 4, 1, 5)
+7
+ 7
+0 7
+0   7
+0 3 7
+0   3 7
+0 2 3 7
+0 2 3   7
+0 2 3 6 7
+0 2 3   6 7
+0 2 3 4 6 7
+0   2 3 4 6 7
+0 1 2 3 4 6 7
+0 1 2 3 4   6 7 
+0 1 2 3 4 5 6 7
+
+Seleção
+(7, 0, 3, 2, 6, 4, 1, 5)
+
+0 7 3 2 6 4 1 5
+0 1 3 2 6 4 7 5
+0 1 2 3 6 4 7 5
+0 1 2 3 6 4 7 5 (copia ele para ele mesmo)
+0 1 2 3 4 6 7 5
+0 1 2 3 4 5 7 6
+0 1 2 3 4 5 6 7
+
+
