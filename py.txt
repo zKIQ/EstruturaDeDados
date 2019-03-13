@@ -8,11 +8,11 @@ def fat(n):
 print(fat(4))
 print(4*fat(3))
 
-#n„o possui for, nao posui while, e como faÁo a repetiÁ„o?
-	No retorno da recurs„o, quando a instancia menor for resolvida
+#n√£o possui for, nao posui while, e como fa√ßo a repeti√ß√£o?
+	No retorno da recurs√£o, quando a instancia menor for resolvida
 
 
-ExplicaÁ„o:
+Explica√ß√£o:
 
 fat(4)
 
@@ -20,7 +20,7 @@ n = 4
 
 if 4 <= 1:
 else:
-	return 4 * fat(3)             #fica parado ate resolver, ent„o ele desenvolve em n˙meros menores atÈ encontrar uma soluÁ„o
+	return 4 * fat(3)             #fica parado ate resolver, ent√£o ele desenvolve em n√∫meros menores at√© encontrar uma solu√ß√£o
 
 n = 3
 
@@ -32,7 +32,7 @@ n = 2
 
 if 2 <= 1:
 else:
-	return 2 * fat(1)            # fat(1) = 1 ent„o: 2 * 1 = 2 e assim por diante
+	return 2 * fat(1)            # fat(1) = 1 ent√£o: 2 * 1 = 2 e assim por diante
 
 n = 1
 
@@ -84,13 +84,13 @@ return 1
 
 
 ======================================================================================================================================================
-FUN«√O QUE UTILIZA RECURSIVIDADE … BOM?
+FUN√á√ÉO QUE UTILIZA RECURSIVIDADE √â BOM?
 NAO
-#calcular fibonacci com recursividade È ruim pois
+#calcular fibonacci com recursividade √© ruim pois
 #ele calcula varias vezes a mesma coisa como um idiota
 #como resolver isso?
 #usando um dicionario para guardar os valores ja calculados
-#sÛ vou chamar a dupla recurs„o para quem ainda nao estiver
+#s√≥ vou chamar a dupla recurs√£o para quem ainda nao estiver
 #no dicionario
 
 
@@ -135,7 +135,7 @@ def pot(x, n):
 #3
 def mdc(a, b):
 	if a % b == 0: return b
-	return mdc(b, a%b)           # ao pÈ da letra o b substitui o "a" e o resto da divis„o de a por b substitui o "b"
+	return mdc(b, a%b)           # ao p√© da letra o b substitui o "a" e o resto da divis√£o de a por b substitui o "b"
 #4
 def inv(s):
 	if len(s) == 0: return s
@@ -152,63 +152,63 @@ def sd(n):
 PONTEIROS EM C UHUUU
 
 POR QUE APRENDEMOS PONTEIROS?
-PRINCIPALMENTE PARA A LIMITA«√O DOS VETORES
-#1 O TAMANHO DO VETOR … EST¡TICO
-#2 INSERIR E REMOVER NO INICIO DE UM VETOR … MUITO LENTO
+PRINCIPALMENTE PARA A LIMITA√á√ÉO DOS VETORES
+#1 O TAMANHO DO VETOR √â EST√ÅTICO
+#2 INSERIR E REMOVER NO INICIO DE UM VETOR √â MUITO LENTO
 
-QUAL A ESTRUTURA DE DADOS QUE RESOLVER ESSE PROBLEMA DE INSERIR E REMOVER ALEM DO FATO DO VETOR SER EST¡TICO?
+QUAL A ESTRUTURA DE DADOS QUE RESOLVER ESSE PROBLEMA DE INSERIR E REMOVER ALEM DO FATO DO VETOR SER EST√ÅTICO?
 
-A RESPOSTA … LISTA ENCADEADA: RESOLVE ESSES DOIS PROBLEMAS MAS, PARA IMPLEMENTAR ESTA NOVA ESTRUTURA DE DADOS, PRECISO USAR PONTEIROS!!!!!!
-COM PONTEIROS FA«O ALOCA«√O DIN¬MICA, PARA TER VETORES DE TAMANHO DIN¬MICO, E TAMB…M CONSIGO IMPLEMENTAR LISTAS ENCADEADAS("CA«A AO TESOURO")
+A RESPOSTA √â LISTA ENCADEADA: RESOLVE ESSES DOIS PROBLEMAS MAS, PARA IMPLEMENTAR ESTA NOVA ESTRUTURA DE DADOS, PRECISO USAR PONTEIROS!!!!!!
+COM PONTEIROS FA√áO ALOCA√á√ÉO DIN√ÇMICA, PARA TER VETORES DE TAMANHO DIN√ÇMICO, E TAMB√âM CONSIGO IMPLEMENTAR LISTAS ENCADEADAS("CA√áA AO TESOURO")
 
 
 ===============================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
 
 
-Vetor s„o uma estrutura de dados que tem alguns pontos falhos: n„o s„o alocados 
-dinamicamente e a inserÁ„o ou remoÁ„o de elementos, no inicio È muito ruim
-como resolvo a inserÁ„o e remoÁ„o de elementos? Usando listas encadeadas ("caÁa ao tesouro")
+Vetor s√£o uma estrutura de dados que tem alguns pontos falhos: n√£o s√£o alocados 
+dinamicamente e a inser√ß√£o ou remo√ß√£o de elementos, no inicio √© muito ruim
+como resolvo a inser√ß√£o e remo√ß√£o de elementos? Usando listas encadeadas ("ca√ßa ao tesouro")
 
-Vantagens da Lista encadeada: posso alocar dinamicamente elementos e inserir ou remover elementos È r·pido.
-Desvantagens: Ocupam um pouco mais espaÁo
+Vantagens da Lista encadeada: posso alocar dinamicamente elementos e inserir ou remover elementos √© r√°pido.
+Desvantagens: Ocupam um pouco mais espa√ßo
 
 1) Notem que estou inserindo ao contrario para ter uma lista 3 -> 5 -> 10 eu inseri 10, 5, 3
 por que?
 
-Porque inserir no comeÁo da lista?
-Eu sei o inicio, se fosse inserir no final seria demorado pois teria que andar de um em um atÈ o final
+Porque inserir no come√ßo da lista?
+Eu sei o inicio, se fosse inserir no final seria demorado pois teria que andar de um em um at√© o final
 
 
 ===============================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
 
-ponteiros s„o fundamentais em C (e tambÈm muito difÌceis)
+ponteiros s√£o fundamentais em C (e tamb√©m muito dif√≠ceis)
 
 1)
-Eu faÁo passagem de par‚metros por referencia por ponteiro void troca(int *p; int*q)
-eu sÛ consigo trocar vari·veis locais, se eu passar o endereÁo delas nos argumentos da funÁ„o troca, isso È, uso
-ponteiros para acessar as vari·veis na origem
+Eu fa√ßo passagem de par√¢metros por referencia por ponteiro void troca(int *p; int*q)
+eu s√≥ consigo trocar vari√°veis locais, se eu passar o endere√ßo delas nos argumentos da fun√ß√£o troca, isso √©, uso
+ponteiros para acessar as vari√°veis na origem
 
 2)
-FaÁo alocaÁ„o din‚mica de um vetor como int *v e uso a funÁ„o
-malloc para alocar a memoria do vetor no tamanho obtido em tempo de execuÁ„o, isto È melhor do alocaÁ„o est·tica
+Fa√ßo aloca√ß√£o din√¢mica de um vetor como int *v e uso a fun√ß√£o
+malloc para alocar a memoria do vetor no tamanho obtido em tempo de execu√ß√£o, isto √© melhor do aloca√ß√£o est√°tica
 lembra
 
 
 1. ponteiro e a coisa apontada sao realidades diferentes
-2. ponteiro sÛ tem sentido se aponta para algo, se o seu 
+2. ponteiro s√≥ tem sentido se aponta para algo, se o seu 
 programa tiver um ponteiro que nao aponta pra nada, nem
 precisa entender o que ele faz, esta errado
 3. posso ter mais de um ponteiro apontando para a mesma 
-regi„o da memÛria
+regi√£o da mem√≥ria
 
 ===============================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
 
-Fila - estrutura de dados onde onde o primeiro que entra È o primeiro que sai
+Fila - estrutura de dados onde onde o primeiro que entra √© o primeiro que sai
 em ingles: FIFO (first in first out)
 
-o jeito mais facil de implementar uma fila È com um vetor, se
+o jeito mais facil de implementar uma fila √© com um vetor, se
 voce sabe que a fila vai ter um tamanho limitado
-terei duas variaveis, s de inicio e t de posiÁ„o livre,
+terei duas variaveis, s de inicio e t de posi√ß√£o livre,
 depois do ultimo da fila 
 Inserir elemnetos:
 f[t++] = x
@@ -221,56 +221,56 @@ dois algoritimos possiveis
 
 busca sequencial
 busca binaria
-o primeiro nao *usa* a informaÁ„o
+o primeiro nao *usa* a informa√ß√£o
 
 se voce tem uma lista telefonica, nao procura de folha em folha,
 do inicio ate o fim, mas abre a lista no meio.
 
-o problema ontem È que a maior parte de nossos dados **nao** esta e ordem
+o problema ontem √© que a maior parte de nossos dados **nao** esta e ordem
 
 entao eu quero saber se vale a pena colocar em ordem 
-vamos aprender cinco algoritimos de  ordenaÁ„o
+vamos aprender cinco algoritimos de  ordena√ß√£o
 
 
-ruins: inserÁ„o e seleÁ„o
+ruins: inser√ß√£o e sele√ß√£o
 bons: mergesort, heapsort e quicksort
 
-eu estudando esses algorÌtimos aprendo como ver se um algorÌtimo È bom
+eu estudando esses algor√≠timos aprendo como ver se um algor√≠timo √© bom
 
-a calcular o numero de passos pelo pior caso, e pelo caso mÈdio tambÈm v„o aprender
-que um algorÌtimo pode ser paralelizado, se os dados de cada parte s„o independentes
-tambÈm ir„o aprender que n„o basta o algorÌtimo ter um numero de passos pequenos,
+a calcular o numero de passos pelo pior caso, e pelo caso m√©dio tamb√©m v√£o aprender
+que um algor√≠timo pode ser paralelizado, se os dados de cada parte s√£o independentes
+tamb√©m ir√£o aprender que n√£o basta o algor√≠timo ter um numero de passos pequenos,
 ele tambem deve ocupar pouca memoria
-mergesort È rapido no numero de passos, mas ocupa o dobro da memoria
+mergesort √© rapido no numero de passos, mas ocupa o dobro da memoria
 
-os primeiros ruins sao inserÁ„o e seleÁ„o
-ate os ruins sao compar·veis entre si
-existem ruins e pÈssimos
-seleÁ„o È muito pior que inserÁ„o, È ruim!
+os primeiros ruins sao inser√ß√£o e sele√ß√£o
+ate os ruins sao compar√°veis entre si
+existem ruins e p√©ssimos
+sele√ß√£o √© muito pior que inser√ß√£o, √© ruim!
 
-inserÁ„o tambem conhecido como algoritio do baralho cada carta voce ira comparar 
-com as ja em ordem do lado esquerdo e enfiar a carta na posiÁ„o dela
+inser√ß√£o tambem conhecido como algoritio do baralho cada carta voce ira comparar 
+com as ja em ordem do lado esquerdo e enfiar a carta na posi√ß√£o dela
 
-cartas com valores baixos s„o ruins, porque para inserir ela preciso mover todo mundo
+cartas com valores baixos s√£o ruins, porque para inserir ela preciso mover todo mundo
 para a direita
-cartas com o valor alto s„o boas, nao precisam mover muita gente.
+cartas com o valor alto s√£o boas, nao precisam mover muita gente.
 
 3, 1, 4, 2, 6, 5, 7, 0
     3 (preciso mover para direita)
 1, 3 (enfio o 1 na primeira pos)
-1, 3, 4 (n„o movo ninguÈm)
+1, 3, 4 (n√£o movo ningu√©m)
 1, 2, 3, 4
-1, 2, 3, 4, 6 (6 È grande)
+1, 2, 3, 4, 6 (6 √© grande)
 1, 2, 3, 4,  ,  6(movo o 6)
-1, 2, 3, 4, 5, 6, 7 (7 È um bom numero)
+1, 2, 3, 4, 5, 6, 7 (7 √© um bom numero)
     1, 2, 3, 4, 5, 6, 7
-    (0 È o pior numero, movo todos)
+    (0 √© o pior numero, movo todos)
 0, 1, 2, 3, 4, 5, 6, 7 
 
 
-n * n = n≤ (pior caso)
-no entanto, aproveito uma informaÁ„o, lado esquerdo ja esta
-em ordem, ent„o na mÈdia gasto menos que n≤
+n * n = n¬≤ (pior caso)
+no entanto, aproveito uma informa√ß√£o, lado esquerdo ja esta
+em ordem, ent√£o na m√©dia gasto menos que n¬≤
 
 
 2 6 1 3 5 0 4 7
@@ -288,26 +288,26 @@ em ordem, ent„o na mÈdia gasto menos que n≤
 0 1 2 3 4 5 6
 0 1 2 3 4 5 6 7
 
-#seleÁ„o escolhe o menor para a direita e troca a posiÁ„o atual com o menor selecionado
-ele tambÈm È ruim mas È pÈssimo, pois n„o uso  nenhuma informaÁ„o, pois o lado direito
-È desconhecido  lado direito sendo desconhecido vai fazer com que meu algorÌtimo n„o tenha
+#sele√ß√£o escolhe o menor para a direita e troca a posi√ß√£o atual com o menor selecionado
+ele tamb√©m √© ruim mas √© p√©ssimo, pois n√£o uso  nenhuma informa√ß√£o, pois o lado direito
+√© desconhecido  lado direito sendo desconhecido vai fazer com que meu algor√≠timo n√£o tenha
 caso bom, apenas caso ruim
 
-inserÁ„o e seleÁ„o s„o ruim no pior caso, porem na mÈdia, inserÁ„o È melhor, inserÁ„o usa a 
-informaÁ„o do lado esquerdo ordenado como uso o lado direito, que nao me da nenhuma 
-informaÁ„o, na mÈdia ele È t„o ruim como no pior caso
+inser√ß√£o e sele√ß√£o s√£o ruim no pior caso, porem na m√©dia, inser√ß√£o √© melhor, inser√ß√£o usa a 
+informa√ß√£o do lado esquerdo ordenado como uso o lado direito, que nao me da nenhuma 
+informa√ß√£o, na m√©dia ele √© t√£o ruim como no pior caso
 
-2 6 1 3 5 0 4 7 (anda atÈ o final do vetor e troca a posiÁ„o atual com o minimo)
-0 6 1 3 5 2 4 7 (posiÁ„o atual: 6, 1 È o minimo)
-0 1 6 3 5 2 4 7 (posiÁ„o atual: 6, 2 È o minimo)
-0 1 2 3 5 6 4 7 (posiÁ„o atual: 3, permanece)
-0 1 2 3 5 6 4 7 (posiÁ„o atual: 5, 4 È o minimo)
-0 1 2 3 4 6 5 7 (posiÁ„o atual: 6, 5 È o minimo)
+2 6 1 3 5 0 4 7 (anda at√© o final do vetor e troca a posi√ß√£o atual com o minimo)
+0 6 1 3 5 2 4 7 (posi√ß√£o atual: 6, 1 √© o minimo)
+0 1 6 3 5 2 4 7 (posi√ß√£o atual: 6, 2 √© o minimo)
+0 1 2 3 5 6 4 7 (posi√ß√£o atual: 3, permanece)
+0 1 2 3 5 6 4 7 (posi√ß√£o atual: 5, 4 √© o minimo)
+0 1 2 3 4 6 5 7 (posi√ß√£o atual: 6, 5 √© o minimo)
 0 1 2 3 4 5 6 7 (termino)
-(sempre que ele olhar para a direita e n„o tiver um menor que ele, ele se auto-substitui)
+(sempre que ele olhar para a direita e n√£o tiver um menor que ele, ele se auto-substitui)
 
-seleÁ„o tem o pior caso igual ao caso medio, pois nao consigo aproveitar nenhuma informaÁ„o
-inserÁ„o aproveita o lado esquerdo que est· sendo formado, ja ordenado, por isso na media ele È 
+sele√ß√£o tem o pior caso igual ao caso medio, pois nao consigo aproveitar nenhuma informa√ß√£o
+inser√ß√£o aproveita o lado esquerdo que est√° sendo formado, ja ordenado, por isso na media ele √© 
 melhor que o pior caso
 
 3 1 4 2 6 5 7 0
@@ -323,10 +323,10 @@ melhor que o pior caso
 3 5 7 4 1 6 0 2
 3 5 4 7 1 6 0 2
 3 4 5 7 1 6 0 2
-            1 È menor que todos da esquerda, entao anda todos para a direita
+            1 √© menor que todos da esquerda, entao anda todos para a direita
 1 3 4 5 7 6 0 2
 1 3 4 5 6 7 0 2
-		  0 È menor que todos, todos andam pra direita
+		  0 √© menor que todos, todos andam pra direita
 0 1 3 4 5 6 7 2
 0 1    3 4 5 6 7
 0 1 2 3 4 5 6 7
@@ -342,40 +342,40 @@ melhor que o pior caso
 ====================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
 
 
-Comparando a inserÁ„o e seleÁ„o
-os dois tem n≤ operaÁıes no pior caso
-porem, na mÈdia inserÁ„o È melhor,
-pois usa a informaÁ„o do lado esquerdo
-j· ordenado, assim n˙meros grandes
-geram menos operaÁıes. No algoritmo
-de seleÁ„o uso o lado direito, que
-n„o fornece nenhuma informaÁ„o adicional,
-isto È, sempre sera ruim
+Comparando a inser√ß√£o e sele√ß√£o
+os dois tem n¬≤ opera√ß√µes no pior caso
+porem, na m√©dia inser√ß√£o √© melhor,
+pois usa a informa√ß√£o do lado esquerdo
+j√° ordenado, assim n√∫meros grandes
+geram menos opera√ß√µes. No algoritmo
+de sele√ß√£o uso o lado direito, que
+n√£o fornece nenhuma informa√ß√£o adicional,
+isto √©, sempre sera ruim
 
 
-como melhorar? vamos ver 3 algorÌtimos
+como melhorar? vamos ver 3 algor√≠timos
 que usam a ideia de dividir em 2 da busca binaria
 
 Mergesort - dividir vetor em 2
-heasort - dividir Ìndice do vetor em 2
-quicksort - escolher um pivÙ  e dividir
+heasort - dividir √≠ndice do vetor em 2
+quicksort - escolher um piv√¥  e dividir
 		  o vetor em menores ou maiores
-		  que o pivÙ escolhido
+		  que o piv√¥ escolhido
 
 
 6 4 3 1 0 2 7 5     		- dividir em 2
 6 4 3 1     0 2 7 5  		- cada metade dividir em 2
 6 4   3 1   0 2    7 5 		- cada dupla dividir em 2 (terei vetores de tamanho 1)
-6,4   3,1   0,2    7,5 		- quando tiver vetores de tamanho 1 vou "voltar" juntando os pedaÁos ja ordenado
-					- ex juntar duas filas de crianÁas em ordem de altura numa unica fileira, comparando
-					- as duas crianÁas da frente e escolhendo a menor
+6,4   3,1   0,2    7,5 		- quando tiver vetores de tamanho 1 vou "voltar" juntando os peda√ßos ja ordenado
+					- ex juntar duas filas de crian√ßas em ordem de altura numa unica fileira, comparando
+					- as duas crian√ßas da frente e escolhendo a menor
 
 4 6   1 3   0 2    5 7 		- compara dois vetores com dois vetores sempre o primeiro do primeiro vetor com os outros do segundo vetor
 1 3 4 6    0 2 5 7		- 4 <1? - 4<3?
 0 1 2 3 4 5 6 7  		- 1<0? - 1<2? - 1<5? - 1<7?
 
-vamos analisar o numero de operaÁıes
-dividir em 2 o vetor È muito rapido
+vamos analisar o numero de opera√ß√µes
+dividir em 2 o vetor √© muito rapido
 
 vou gastar log2 n passo p/ isso
 cada vez que junto dois vetores
@@ -383,7 +383,7 @@ ordenados gasto n passos
 
 logo, no total 1 * 2 = log n * n (base 2)
 
-o que È muito menor que n * n = n≤
+o que √© muito menor que n * n = n¬≤
 
 4 2 3 1 5 0 6 7
 4 2 3 1   5 0 6 7
@@ -424,11 +424,11 @@ print (mergesort([3, 4, 8, 0, 6, 7, 4, 2, 1, 9, 4, 5]))
 
 
 Analise de mergesort:
-1 -   na media  log n * n (base 2) operaÁıes
-	È mais r·pido que inserÁ„o e seleÁ„o.
-2 -    porÈm no mergesort È preciso um vetor auxiliar,
-	ent„o no ultimo passo eu gasto o dobro de espaÁo
-3 - 	as duas metades de meresort s„o independentes
+1 -   na media  log n * n (base 2) opera√ß√µes
+	√© mais r√°pido que inser√ß√£o e sele√ß√£o.
+2 -    por√©m no mergesort √© preciso um vetor auxiliar,
+	ent√£o no ultimo passo eu gasto o dobro de espa√ßo
+3 - 	as duas metades de meresort s√£o independentes
 	posso fazer em paralelo.
 	
 
@@ -436,7 +436,11 @@ Analise de mergesort:
 Mais uma analise de mergesort
 
 1. Para juntar duas fileiras gasto n passos no final.
-2. Para dividir em dois atÈ que os vetores finais
+2. Para dividir em dois at√© que os vetores finais
 tenham tamanho 1, gasto log(n, 2)
 3. No total vou gastar n*llog(n, 2) passos, muito
-mais rapido que inserÁ„o e seleÁ„o
+mais rapido que inser√ß√£o e sele√ß√£o
+4. mergesort gasta o dobro da memoria, porque
+preciso de um vetor auxiliar para o resultado da jun√ß√£o
+5. As duas metades do Mergesort s√£o independentes
+logo posso executa-los em paralelo
