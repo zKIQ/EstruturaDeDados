@@ -587,3 +587,4 @@ n! é muito pior do que 2**n
 
 log n(base 2)<<<n**2<<<2**n<<<n!
 log é mais rapido!!
+
