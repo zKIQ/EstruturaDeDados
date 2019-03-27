@@ -583,3 +583,7 @@ subconjuntos(2**N)
 permutações(N!)
 2**n e n! são muitos ruins, porem
 n! é muito pior do que 2**n
+
+
+log n(base 2)<<<n**2<<<2**n<<<n!
+log é mais rapido!!
