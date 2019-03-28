@@ -634,3 +634,11 @@ mergesort(é muito rico):
 	posso executar em **paralelo**(POSSIVEL QUESTAO DE PROVA)
 	PQ? PORQUE AS DUAS SÃO INDEPENDENTEEEEES
 	
+quicksort: pega o pivô e divide os vetores em maiores
+	pro lado e menor pro outro
+	qual pior caso?
+	PIOR CASO É O VETOR JA ORDENADO POREM É MUITO RARO
+	NA MEDIA (N*LOG N BASE 2 PASSOS) É MUITO RÁPIDO
+	
+	*****É PRA FAZER TESTE DE MESA DE TODOS****
+	(INSERÇÃO, SELEÇÃO, MERGESORT, QUICKSORT)
