@@ -588,3 +588,49 @@ n! é muito pior do que 2**n
 log n(base 2)<<<n**2<<<2**n<<<n!
 log é mais rapido!!
 
+
+recursão nem sempre é a melhor opção
+Fa(b), fib(n), sd(), inv(s), pot(x,m), mdc(a,b)
+vetores
+caso ruim: inserir ou remover no inicio
+como resolvo: listas ligadas
+
+ponteiros:
+Em c alocação dinamica vetor
+referencia variaveis em funções
+implementar listas encadeadas
+Principais regras:
+	nuca use um ponteiro que nao aponta pra nada
+	ponteiro só tem sentido se aponta pra algo
+Listas encadeadas:
+podem ter cabeça ou não
+vantagens nao precisa testar se a lista esta vazia
+e nao terei *ponteiros para ponteiros* ou insere
+ou remove.
+
+(pode pedir os exercicios amarelinhos da lista de pdf, menos os dois ultimos)
+
+fila: first in first out - não cai
+pilha: ultimo que entra é o primeiro que sai
+	estudar exemplos: transformar decimal p/ binario
+	verificar expressões({})
+Busca binaria(um dos mais importantes(muito rapido(log n base 2 passos))): quantos passos demoro pra achar alguem.
+	Se eu dobro ou quadruplico o vetor quantos passos gastam mais?
+	se eu dobrar o vetor eu gasto um passo a mais.
+ordenação:
+	2 ruins - inserção e seleção
+	no pior caso são n**2 passos
+	na media, o inserção (algoritimo do baralho) é um pouquinho
+	melhor pois aproveita o lado esquerdo ja ordenado, seleção
+	é sempre ruim, pois olha o lado direito do qual nao tenho
+	nenhuma informação.
+	2 bons - mergesort, quicksort
+	na média (n*log n na base 2) passos
+mergesort(é muito rico):
+	Gasta o dobo da memoria, isto é
+	nao basta seu algoritimo ter poucos passos
+	é necessario gastar pouco espaço
+	as duas metades de cada passo são idependentes
+	posso executar em **paralelo**(POSSIVEL QUESTAO DE PROVA)
+	PQ? PORQUE AS DUAS SÃO INDEPENDENTEEEEES
+	
