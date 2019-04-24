@@ -663,4 +663,20 @@ FORÇA BRUTA:
 	0 1 2 3 4 5 6 7
 	
 	
+	Infixa e posfixa
+	Árvore em ED é de ponta cabeça, raiz em cima e galhos em baixo
+	uma arvore é binaria se cada nó tem no maximo dois filhos.
 	
+	Indice de banco de dados usa arvore.
+	
+	em ingles arvore binaria é BTree, usada para otmizar busca
+	em banco de dados.
+	
+	uma aplicação é converter expressoes aritméticas de fixa para
+	posfixa.
+	
+	1. Desenhe a arvore, operadores menos prioritarios ficam para cima
+	2. Faça uma varredura EDR (Esquerda direita raiz), nela a raiz só
+	sai quando o lado esquerdo e o lado direito estão resolvidos. Prioridade
+	para o lado esquerdo
+	3.Dica: operador tem como filho uma letra isolada ou outro operador
