@@ -680,3 +680,8 @@ FORÇA BRUTA:
 	sai quando o lado esquerdo e o lado direito estão resolvidos. Prioridade
 	para o lado esquerdo
 	3.Dica: operador tem como filho uma letra isolada ou outro operador
+
+
+1) pode ser desenhado sem cruzar linhas(planar)
+2) tem um circuito, que comeca em um vertice, passar por todos os outros, sem repetir e volta para a origem(circuito hamiltoniano)
+3) tem um casamento(emparelhamento onde não sobra ninguém solteiro)
