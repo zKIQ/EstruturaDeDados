@@ -1,0 +1,79 @@
+Revisão para a P2
+Boyer moore(monta tabela de pulos)
+procura ocorrencias de uma palavra em uma frase
+
+algoritmo
+987154321 -> tabela de "pulos"
+tabela para caracteres que nao estao na palavra
+pula o tamanho total + 1 
+os algoritmos de ordenação
+   algoritmo
+- Boyer moore permite dar "pulos" mais que 1
+
+Qual é o pior caso de Boyer Moore?
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+ @XXXXXXXXXXX
+111111111111
+- frase com uma unica letra + palavra com uma 
+  unica letra com exceção da primeira
+Nesse pior caso, se a frase tem n letras, e a 
+palavra m letras, terei m * n comparações
+
+porém, esse pior caso é raro, por isso Boyer moore
+funciona bem na prática
+
+frutas como abacate, banana, uva, pêssego e mamão
+abacaxi
+**ESSE EXEMPLO NÃO É O PIOR CASO**
+- palavra que não esta na frase posso ter letras
+na frase que não estão na palavra, então vou dar pulos grandes
+===================================================================================================================
+**Converter expressão aritmética de notação infixa para pós fixa**
+primeiro fazer a arvore da expressão
+regras:
+1. Operadores menos prioritarios mais em cima
+2.no empate pego o mais a direita
+3. faço a varredura EsqDirRaix
+
+cuidado: nem sempre  a raiz é o operador do meio!
+podemos ter àrvores desbalanceadas
+
+quantas operações custa descobrir alguem numa
+arvore binaria de busca?
+loga(n, 2)
+
+**ELE VAI COLOCAR UM OPERADOR MENOS PRIORITARIO NA 
+PONTA (/(DIVISÃO) OU *(MULTIPLICAÇÃO))**
+
+Quantas operações custa desborir alguém num
+vetor ordenado, com busca binaria?
+- log(n, 2)
+
+Eu gasto o mesmo numero de passos!!!!! é igual!!!
+
+qual é a vantagem da arvore binaria de busca sobre
+a busca binaria em um vetor ordenado?
+
+- para inserir e remover é muito mais rapido utiliar
+ponteiros, isso acontee na árvore binária e não no vetor 
+odernado!
+===================================================================================================================
+grafos são a sua salvação em termos de NOTA!!
+
+Porque o professor nao pode cobrar muita coisa,
+somente conceitos básicos!
+Alem disso, grafos tem representação visua, então é menos
+abstrato estudar!
+Grafos são compostos de dois conjuntos: vértices e aresta.
+Faça o exercicio 1
+grafos complementar = mesmos vértices, onde tem
+aresta eu tiro, onde nao tem eu coloco
+
+(cavalo tres por tres (3x3))
+
+desenhe o cavalo 3x3
+mostre que:
+1. ele é planar
+2. mostre um circuito hamiltoniano
+3. mostre um emparelhamento máximo
+
